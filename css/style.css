@@ -65,7 +65,7 @@ main{
 
 .main-content{
     width: calc(100% - 230px);
-    height: calc(100% - 90px);
+    height: 100%;
     overflow-y:auto;
 }
 
@@ -127,6 +127,9 @@ main{
     justify-content: space-between;
 }
 
+.a-center{
+    align-items: center;
+}
 .j-center{
     justify-content: center;
 }
@@ -211,3 +214,28 @@ nav.main-nav div.container:last-child{
     border-radius: 50%;
 }
 
+
+/* playbar section */
+
+nav.playbar img{
+    width:10%;
+}
+
+.bar{
+    width:30vw;
+    height: 5px;
+    border-radius: 25px;
+    background-color: var(--light-dark);
+    position:relative
+}
+
+.bar.watched-bar{
+    width: 30%;
+    background-color: var(--grey);
+    position:absolute;
+    left:0;
+}
+
+.bar.volume{
+    width: 5vw;
+}
