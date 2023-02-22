@@ -11,7 +11,6 @@
 --dark: #000000;
 --light-dark: #141922;
 --dark-grey: #282828;
---transparent-dark-grey: #28282870;
 --grey: #C1C1C1;
 --highlight: #ADFF2F;
 --spotify-green: #23CF5F;
@@ -25,7 +24,7 @@ body{
 
 a{
     text-decoration: none;
-    color: white;
+    color:white;
 }
 
 img{
@@ -41,20 +40,9 @@ hr{
 .wrapper{
     width:100%;
     height:100vh;
+    overflow: hidden;
 }
 
-#call-to-action{
-    position:fixed;
-    display:flex;
-    justify-content: end;
-    align-items: center;
-    background-color: var(--transparent-dark-grey);
-    width:100%;
-    height: 80px;
-    top:0;
-    right:0;
-    z-index: 8;
-}
 
 main{
     display:flex;
@@ -62,6 +50,7 @@ main{
     width:100%;
     height: calc(100% - 90px);
     overflow:hidden;
+    color:white;
 }
 
 .main-nav{
@@ -76,9 +65,12 @@ main{
 
 .main-content{
     width: calc(100% - 230px);
-    height: 100%;
+    height: calc(100% - 90px);
     overflow-y:auto;
-    margin-top: 100px;
+}
+
+.main-section{
+    margin-top: 80px;
 }
 
 .playbar{
@@ -99,20 +91,26 @@ main{
 
 .row{
     display:flex;
-    justify-content: space-between;
+    flex-flow: row wrap;
     margin-left: -15px;
     margin-right: -15px;
 }
 
 .card{
+    display:flex;
+    flex-direction: column;
     padding:15px;
     width: calc(100% / 6);
+    text-align: center;
 }
 
 .card img{
     width:100%;
 }
 
+.round{
+    border-radius: 50%
+}
 /* utility */
 
 .c-flex{
@@ -144,6 +142,30 @@ main{
 .uppercase{
     text-transform: uppercase;
 }
+
+/* call to action styles */
+
+#call-to-action{
+    position:fixed;
+    display:flex;
+    justify-content: end;
+    align-items: center;
+    background-color: var(--dark-grey);
+    opacity:0.7;
+    width: calc(100% - 230px);
+    height: 80px;
+    top:0;
+    right:0;
+}
+
+#call-to-action div.btn{
+    border: 1px solid white;
+    display:inline-block;
+    border-radius: 20px;
+    padding: 15px 20px 15px 20px;
+    font-weight: 600;
+}
+
 
 /* links' classes */
 
@@ -189,11 +211,3 @@ nav.main-nav div.container:last-child{
     border-radius: 50%;
 }
 
-/* call to action styles */
-
-#call-to-action div{
-    border: 1px solid white;
-    border-radius: 20px;
-    padding: 15px 20px 15px 20px;
-    font-weight: 600;
-}
