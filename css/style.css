@@ -16,6 +16,25 @@
 --spotify-green: #23CF5F;
 }
 
+/* generic rules */
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+img{
+    max-width: 100%;
+}
+
+hr{
+    margin: 10px 0px 10px 0px;
+}
+
 /* base structure  */
 
 .wrapper{
@@ -25,9 +44,12 @@
 
 #call-to-action{
     position:fixed;
+    display:flex;
+    justify-content: end;
+    align-items: center;
     background-color: var(--dark-grey);
     width:100%;
-    height: 60px;
+    height: 80px;
     top:0;
     right:0;
     z-index: 8;
@@ -42,6 +64,9 @@ main{
 }
 
 .main-nav{
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
     width: 230px;
     min-height: 480px;
     background-color: var(--dark);
@@ -84,4 +109,55 @@ main{
 
 .card img{
     width:100%;
+}
+
+/* utility */
+
+.c-flex{
+    display:flex;
+    flex-direction: column;
+}
+
+.d-flex{
+    display:flex;
+    flex-direction: row;
+}
+
+.j-between{
+    justify-content: space-between;
+}
+
+.j-center{
+    justify-content: center;
+}
+
+.gap-10{
+    gap:10px;
+}
+
+/* links' classes */
+
+.link{
+    display:flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.link img{
+    width:10%;
+}
+
+/* main nav */
+
+nav.main-nav div.container:last-child{
+    position:relative;
+    bottom:0;
+}
+
+#profile-pic{
+    vertical-align: middle;
+    background-color: var(--grey);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
 }
