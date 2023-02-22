@@ -130,8 +130,13 @@ main{
 .a-center{
     align-items: center;
 }
+
 .j-center{
     justify-content: center;
+}
+
+.j-.end{
+    justify-content: flex-end;
 }
 
 .gap-10{
@@ -140,6 +145,22 @@ main{
 
 .gap-20{
     gap:20px;
+}
+
+.pad-10{
+    padding: 0px 10px 0px 10px;
+}
+
+.pad-20{
+    padding: 0px 20px 0px 20px;
+}
+
+.w-25{
+    width:25%;
+}
+
+.w-50{
+    width:50%;
 }
 
 .uppercase{
@@ -218,7 +239,7 @@ nav.main-nav div.container:last-child{
 /* playbar section */
 
 nav.playbar img{
-    width:10%;
+    width:15%;
 }
 
 .bar{
@@ -226,16 +247,22 @@ nav.playbar img{
     height: 5px;
     border-radius: 25px;
     background-color: var(--light-dark);
-    position:relative
+    position:relative;
 }
 
-.bar.watched-bar{
+.watched-bar{
     width: 30%;
+    height:5px;
+    border-radius: 25px;
     background-color: var(--grey);
     position:absolute;
     left:0;
 }
 
-.bar.volume{
-    width: 5vw;
+.volume{
+    width: calc(30vw / 3);
+}
+
+.watched-bar.volume{
+    width: 30%;
 }
