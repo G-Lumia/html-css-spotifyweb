@@ -49,6 +49,11 @@ h1,h2,h3,h4,h5,h6{
 .d-flex{
     display:flex;
     flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.no-wrap{
+    flex-wrap: nowrap;
 }
 
 .j-between{
@@ -76,18 +81,13 @@ h1,h2,h3,h4,h5,h6{
     padding: 0px 15px 0px 15px;
 }
 
-.w-25{
-    width:25%;
-}
-
-.w-50{
-    width:50%;
-}
-
 .uppercase{
     text-transform: uppercase;
 }
 
+#mobile-show{
+    display: none;
+}
 /* base structure  */
 
 .wrapper{
@@ -113,7 +113,7 @@ main{
     width: 230px;
     min-height: 480px;
     background-color: var(--dark);
-    z-index: 9;
+    z-index: 1002;
 }
 
 .main-content{
@@ -269,10 +269,6 @@ section.container{
     margin: 30px 0px 30px 0px;
 }
 
-.main-nav .link,h4{
-    padding-left: 15px;
-}
-
 .playlist{
     font-weight: 600;
 }
@@ -295,7 +291,7 @@ section.container{
 /* content navbar */
 
 .main-section nav .link{
-    padding: 0px 10px 5px 10px;
+    padding: 5px 10px 5px 10px;
 }
 
 .main-section nav .link:hover{
@@ -320,23 +316,6 @@ nav.main-nav div.container:last-child{
 
 nav.playbar img{
     width:15%;
-}
-
-.bar{
-    width:30vw;
-    height: 5px;
-    border-radius: 25px;
-    background-color: var(--light-dark);
-    position:relative;
-}
-
-.watched-bar{
-    width: 30%;
-    height:5px;
-    border-radius: 25px;
-    background-color: var(--grey);
-    position:absolute;
-    left:0;
 }
 
 .volume{
@@ -384,4 +363,42 @@ nav.playbar img{
 
 #track-time .slider{
     width: 50%;
+}
+
+@media screen and (min-width:992px) and (max-width:1200px){
+    .card{
+        width: calc(100% / 4);
+    }
+}
+
+@media screen and (max-width:992px) and (min-width:576px){
+    .card{
+        width: calc(100% / 2);
+    }
+}
+
+@media screen and (max-width:576px){
+    .card{
+        width: calc(100% / 2);
+    }
+
+    #mobile-hide{
+        display:none;
+    }
+
+    #mobile-show{
+        display:inline-block;
+    }
+
+    img#mobile-show{
+        width:40%;
+    }
+
+    a#mobile-show img{
+        width:40%;
+    }
+
+    nav.main-nav{
+        text-align: center;
+    }
 }
