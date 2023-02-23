@@ -17,21 +17,25 @@
         <main>
             <!-- nav column bar placed on the left side of the app -->
             <nav class="main-nav">
-                <div>
-                    <img class="container" src="./img/logo.svg" alt="small logo">
+                <div class="container">
+                    <img id="mobile-hide"  src="./img/logo.svg" alt="logo">
+                    <img id="mobile-show"  src="./img/logo-small.svg" alt="small logo">
                     <section id="left-green-bar"class="c-flex fullpad-10">
                         <a href="#" class="link">
-                            <img src="./img/home.svg" alt="home"> Home
+                            <img src="./img/home.svg" alt="home">
+                            <div id="mobile-hide"> Home </div> 
                         </a>
                         <a href="#" class="link">
-                            <img src="./img/search.svg" alt="search"> Cerca
+                            <img src="./img/search.svg" alt="search">
+                            <div id="mobile-hide"> Cerca </div> 
                         </a>
                         <a href="#" class="link">
-                            <img src="./img/libreria.svg" alt="library"> La tua libreria
+                            <img src="./img/libreria.svg" alt="library">
+                            <div id="mobile-hide">La tua libreria </div> 
                         </a>
                     </section>
 
-                    <section class="c-flex gap-10">
+                    <section id="mobile-hide" class="c-flex">
                         <h4>
                             Playlist
                         </h4>
@@ -69,18 +73,20 @@
                     </section>
                 </div>
 
-                <div>
+                <div class="container">
                     <div class="d-flex">
                         <a href="#" class="link">
-                            <img src="./img/download.svg" alt="download"> Installa app
+                            <img src="./img/download.svg" alt="download"> 
+                            <div href="#" id="mobile-hide"> Installa app </div> 
                         </a>
                     </div>
-                    <div class="pad-15">
+                    <div id="mobile-hide" class="pad-15">
                         <hr>
                     </div>
                     <div class="d-flex">
                         <a href="#" class="link">
-                            <img id="profile-pic" src="./img/profile.svg" alt="profile pic"> John Doe
+                            <img id="profile-pic" src="./img/profile.svg" alt="profile pic">
+                            <div id="mobile-hide">John Doe </div> 
                         </a>
                     </div>
                 </div>
@@ -96,7 +102,7 @@
             <!-- the main content of the app, where you can browse to the recently played music, your created playlists and the popular artists of the moment -->  
                 <section class="main-section">
                     <div class="d-flex j-center">
-                        <nav class="d-flex j-between uppercase gap-20">
+                        <nav class="d-flex j-center uppercase gap-20">
                             <a href="#" class="link">
                                 in evidenza
                             </a>
@@ -264,14 +270,14 @@
 
             <!-- the playbar section -->
 
-            <nav class="playbar d-flex j-between a-center">
-                <div class="d-flex j-between a-center tiny pad-10">
+            <nav class="playbar d-flex no-wrap j-between a-center">
+                <div class="d-flex no-wrap j-between a-center tiny pad-10">
                     <img src="./img/sinister.jpeg" alt="tiny sinister">
                     <div class="pad-15">
                         <h6> Sinister</h6>
                         <p> The Spooky Monster </p>
                     </div>
-                    <div class="d-flex j-between">
+                    <div class="d-flex no-wrap j-between">
                         <a href="">
                             <i class="fa-regular fa-heart"></i>
                         </a>
@@ -281,7 +287,7 @@
                     </div>
                 </div>
                 <div class="c-flex a-center">
-                    <div class="player-bar d-flex a-center">
+                    <div class="player-bar d-flex no-wrap a-center">
                         <a href="">
                             <i class="fa-solid fa-shuffle"></i>
                         </a>
@@ -298,14 +304,14 @@
                             <i class="fa-solid fa-rotate-right"></i>
                         </a>
                     </div>
-                    <div id="track-time" class="d-flex j-center">
+                    <div id="track-time" class="d-flex no-wrap j-center">
                         <h6> 0:25 </h6>
                         <input type="range" min="1" max="100" value="30" class="slider">
                         <h6> 4:35 </h6>
                     </div>
                 </div>
 
-                <div class="container tiny d-flex">
+                <div class="container tiny d-flex nowrap">
                     <i class="fa-solid fa-list"></i>
                     <i class="fa-solid fa-desktop"></i>
                     <i class="fa-solid fa-volume-high"></i>
