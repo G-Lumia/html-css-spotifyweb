@@ -18,10 +18,8 @@
             <!-- nav column bar placed on the left side of the app -->
             <nav class="main-nav">
                 <div>
-                    <div class="container">
-                        <img src="./img/logo.svg" alt="small logo">
-                    </div>
-                    <div class="container c-flex gap-10">
+                    <img class="container" src="./img/logo.svg" alt="small logo">
+                    <section id="left-green-bar"class="c-flex fullpad-10">
                         <a href="#" class="link">
                             <img src="./img/home.svg" alt="home"> Home
                         </a>
@@ -31,9 +29,9 @@
                         <a href="#" class="link">
                             <img src="./img/libreria.svg" alt="library"> La tua libreria
                         </a>
-                    </div>
+                    </section>
 
-                    <div class="container c-flex gap-10">
+                    <section class="c-flex gap-10">
                         <h4>
                             Playlist
                         </h4>
@@ -68,16 +66,18 @@
                         <a href="" class="link">
                             Nuova Playlist
                         </a>
-                    </div>
+                    </section>
                 </div>
 
-                <div class="container">
+                <div>
                     <div class="d-flex">
                         <a href="#" class="link">
                             <img src="./img/download.svg" alt="download"> Installa app
                         </a>
                     </div>
-                    <hr>
+                    <div class="pad-15">
+                        <hr>
+                    </div>
                     <div class="d-flex">
                         <a href="#" class="link">
                             <img id="profile-pic" src="./img/profile.svg" alt="profile pic"> John Doe
@@ -85,8 +85,7 @@
                     </div>
                 </div>
             </nav>
-            <!-- the main content of the app, where you can browse to the recently played music, 
-            your created playlists and the popular artists of the moment -->
+
             <div class="main-content container">
                 <!-- a bar placed on the top side of the main content, where the user is advised to upgrade his/her subsciption -->
                 <div id="call-to-action">
@@ -94,9 +93,10 @@
                         <a href="#"> effettua l'upgrade </a>
                     </div>
                 </div>
+            <!-- the main content of the app, where you can browse to the recently played music, your created playlists and the popular artists of the moment -->  
                 <section class="main-section">
-                    <div class="content-navbar d-flex j-center">
-                        <div class="d-flex j-between uppercase gap-20">
+                    <div class="d-flex j-center">
+                        <nav class="d-flex j-between uppercase gap-20">
                             <a href="#" class="link">
                                 in evidenza
                             </a>
@@ -115,7 +115,7 @@
                             <a href="#" class="link">
                                 scopri
                             </a>
-                        </div>
+                        </nav>
                     </div>
     
                     <section class="container">
@@ -264,14 +264,14 @@
 
             <!-- the playbar section -->
 
-            <nav class="container playbar d-flex j-between a-center">
-                <div class="d-flex w-25 a-center gap-10">
+            <nav class="playbar d-flex j-between a-center">
+                <div class="d-flex j-between a-center tiny pad-10">
                     <img src="./img/sinister.jpeg" alt="tiny sinister">
-                    <div class="tiny-title">
+                    <div class="pad-15">
                         <h6> Sinister</h6>
                         <p> The Spooky Monster </p>
                     </div>
-                    <div class="d-flex j-between gap-10">
+                    <div class="d-flex j-between">
                         <a href="">
                             <i class="fa-regular fa-heart"></i>
                         </a>
@@ -280,8 +280,8 @@
                         </a>
                     </div>
                 </div>
-                <div class="c-flex a-center w-50">
-                    <div class="d-flex gap-20">
+                <div class="c-flex a-center">
+                    <div class="player-bar d-flex a-center">
                         <a href="">
                             <i class="fa-solid fa-shuffle"></i>
                         </a>
@@ -289,7 +289,7 @@
                             <i class="fa-solid fa-backward-step"></i>
                         </a>
                         <a href="">
-                            <i class="fa-regular fa-circle-play"></i>
+                            <i class="big fa-regular fa-circle-play"></i>
                         </a>
                         <a href="">
                             <i class="fa-solid fa-forward-step"></i>
@@ -298,24 +298,18 @@
                             <i class="fa-solid fa-rotate-right"></i>
                         </a>
                     </div>
-                    <div class="d-flex gap-20">
+                    <div id="track-time" class="d-flex j-center">
                         <h6> 0:25 </h6>
-                        <div class="bar">
-                            <div class="watched-bar">
-                            </div>
-                        </div>
+                        <input type="range" min="1" max="100" value="30" class="slider">
                         <h6> 4:35 </h6>
                     </div>
                 </div>
-                <div class="d-flex j-end">
-                    <div class="d-flex gap-10">
-                        <i class="fa-solid fa-list"></i>
-                        <i class="fa-solid fa-desktop"></i>
-                        <i class="fa-solid fa-volume-high"></i>
-                        <div class="bar volume">
-                            <div class="watched-bar volume"> </div>
-                        </div>
-                    </div>
+
+                <div class="container tiny d-flex">
+                    <i class="fa-solid fa-list"></i>
+                    <i class="fa-solid fa-desktop"></i>
+                    <i class="fa-solid fa-volume-high"></i>
+                    <input type="range" min="1" max="100" value="30" class="slider">
                 </div>
             </nav>
         </main>
