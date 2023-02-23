@@ -29,6 +29,7 @@ a{
 
 img{
     max-width: 100%;
+    display:block;
 }
 
 hr{
@@ -245,7 +246,10 @@ section.container{
 
 .link{
     display:flex;
-    align-items: center;
+}
+
+.link:hover, .btn a:hover{
+    color:white;
 }
 
 .main-nav .link{
@@ -320,7 +324,7 @@ nav.playbar img{
 }
 
 .tiny{
-    width:230px;
+    max-width:230px;
 }
 
 .tiny h6{
@@ -351,16 +355,20 @@ nav.playbar img{
 }
 
 #track-time{
-    width:calc(100vw - (230px*2));
+    width:calc(70vw - (230px * 2));
+    min-width:230px;
 }
 
-#track-time .slider{
-    width: 50%;
+#volume{
+    width:50px;
 }
+
+/* media querys */
 
 #mobile-show{
     display:none;
 }
+
 
 @media screen and (min-width:992px) and (max-width:1200px){
     .card{
@@ -388,7 +396,7 @@ nav.playbar img{
     }
 
     .link img{
-        width:100%;
+        width:80%;
     }
 
     #profile-pic{
@@ -410,5 +418,9 @@ nav.playbar img{
 
     .tiny{
         width:100px;
+    }
+
+    #call-to-action{
+        max-width: calc(100% - 100px);
     }
 }
